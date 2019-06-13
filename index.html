@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project 1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Mono", monospace;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ecf0f1;
+      }
+      button {
+        margin: 10px;
+        padding: 10px;
+        text-transform: uppercase;
+        color: #ecf0f1;
+        background: #e74c3c;
+        border-radius: 10px;
+        outline: none;
+      }
+      h2 {
+        clear: both;
+        color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var back = document.getElementById("back");
+
+      function btn() {
+        var xhr = new XMLHttpRequest();
+        var url =
+          "http://192.168.1.42:5000/work/?key=qxZVfGaLXvOaWH7W6fISF457hBAZRynlT9MVEuAqvbN6f7ZJMgvx9i9Wb8iGeAkUK28OrL5wRFWaHy48gz4o4BCAqTHnFQN8tFph&val=False";
+        xhr.open("GET", url, true);
+        xhr.onload = function() {
+          var data = JSON.parse(xhr.responseText);
+          console.log(data);
+          callback(data);
+        };
+        xhr.send();
+      }
+
+      function callback(data) {
+        // var text = "";
+        // for (i = 0; i < data.length; i++) {
+        //   text += "<p>" + data[0].name + "</p>";
+        // }
+
+        document.getElementById("back").innerHTML = data;
+      }
+
+      function btnn() {
+        var xhr = new XMLHttpRequest();
+        var url =
+          "http://192.168.1.42:5000/work/?key=qxZVfGaLXvOaWH7W6fISF457hBAZRynlT9MVEuAqvbN6f7ZJMgvx9i9Wb8iGeAkUK28OrL5wRFWaHy48gz4o4BCAqTHnFQN8tFph&val=True";
+        xhr.open("GET", url, true);
+        xhr.onload = function() {
+          var data = JSON.parse(xhr.responseText);
+          console.log(data);
+          callback(data);
+        };
+        xhr.send();
+      }
+
+      function callback(data) {
+        // var text = "";
+        // for (i = 0; i < data.length; i++) {
+        //   text += "<p>" + data[0].name + "</p>";
+        // }
+
+        document.getElementById("back").innerHTML = data;
+      }
+    </script>
+
+    <h2>Press Me</h2>
+    <button onclick="btn()">off</button>
+    <button onclick="btnn()">on</button>
+
+    <div id="back"></div>
+  </body>
+</html>

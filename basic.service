@@ -1,0 +1,16 @@
+[Unit]
+Description=My basic service
+After=network.target
+
+[Service]
+Type=simple
+# Another Type option: forking
+User=pi
+WorkingDirectory=/home/pi/Desktop/automate
+EnvironmentFile=/usr/bin/python3
+ExecStart=/home/pi/Desktop/automate/flask-mark3.py
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
