@@ -18,4 +18,8 @@
 * (21 x 6)2 = left and right
 * (36 x 6)2 = top and bottom
 
-
+# REASON FOR NOT FINISHING
+* JEFFREY
+* JOHN
+* AVINASH
+* ALLWIN
