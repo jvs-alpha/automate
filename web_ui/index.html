@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bulb-1.0</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="bulb.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/68605beeba.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h3>Set the Ip address:</h3>
+        <div class="field">
+          <label for="ip"><i class="fas fa-hand-point-right"></i></label>
+          <input type="text" name="ip" id="ip" placeholder="Address" />
+          <input
+            type="submit"
+            value="Submit"
+            id="submit"
+            onclick="send(),hide()"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="clear"></div>
+    <div class="center">
+      <input type="checkbox" name="" onclick="callme()" />
+      <h2>Status: <span id="demo"></span></h2>
+      <h2>this is your : <span id="summa"></span></h2>
+      <h2 id="summa"></h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

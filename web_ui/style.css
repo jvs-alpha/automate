@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Boogaloo&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.center {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  display: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  background: #444;
+  outline: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"] {
+  background: #14f960;
+}
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #f1f1f1;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]:before {
+  left: 40px;
+}
+
+#demo,
+#summa,
+h2 {
+  color: #14f960;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: "Boogaloo", cursive;
+}
+
+section {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+
+.container {
+  height: 100px;
+  width: 300px;
+  border: 2px solid #14f960;
+  border-radius: 10px;
+}
+
+.container h3 {
+  margin-top: 15px;
+  padding: 0 5px;
+  padding-bottom: 10px;
+  color: #14f960;
+}
+
+.container .field label i {
+  color: #14f960;
+  padding: 5px 5px;
+}
+
+.container .field #ip {
+  border: none;
+  border-bottom: 1px solid #14f960;
+  outline: none;
+  background: transparent;
+  color: aliceblue;
+}
+
+.container .field #submit {
+  color: #14f960;
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#summa {
+  color: #14f960;
+}
+
+.clear {
+  clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+  .center {
+    font-size: 25px;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+  }
+
+  .container {
+    height: 100px;
+    width: 300px;
+    border: 1px solid #14f960;
+    border-radius: 10px;
+  }
+}
