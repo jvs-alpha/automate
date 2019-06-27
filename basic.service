@@ -11,6 +11,7 @@ WorkingDirectory=/home/pi/Desktop/automate
 EnvironmentFile=/usr/bin/python3
 ExecStart=/home/pi/Desktop/automate/flask-mark3.py
 Restart=on-failure
+# If there is an error for restarting comment the "Restart=" option
 # Other Restart options: or always, on-abort, etc
 
 [Install]
