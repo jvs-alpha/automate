@@ -6,6 +6,7 @@ After=network.target
 Type=simple
 # Another Type option: forking
 User=pi
+Group=pi
 WorkingDirectory=/home/pi/Desktop/automate
 EnvironmentFile=/usr/bin/python3
 ExecStart=/home/pi/Desktop/automate/flask-mark3.py
